@@ -1,0 +1,25 @@
+Verbosity leads to unclear, inarticulate things.
+0 1 1 2 3 5
+1 v 838
+10 5
+2 1 51(1对应AH，0对应2H，5对应10H,2对应6H）实际输入201051
+6 4 2 3 1 5
+50
+第六：1.输入必须小于7          第一个数不为1
+          2.前后输入不能相等 
+          3.某区域的内容要大于等于EAX
+15F 20D1 
+MOV EAX,[ESP+4CH+VAR_10]  与FFFFFFFH异或
+MOV EDX,OFFSET NODE1  0804C13C->EDX
+MOV EDX,[EDX+8],即+12
+node1 +8应该是C即12
+第一个数是1：MOV [BFA5BE44],EDX 
+第二个数是3：循环执行MOV EDX,[EDX+8]，知道EAX=ECX（记录读的数）=3
+第三个数是5:
+0804C13C          0F9H1 
+0804C148          233H 2
+0804C154存放着15FH 3
+0804C160           2D1H   4
+0804C16C           073h 5 
+0804C178           3C2H    6
+第7：输入不能大于3E8H

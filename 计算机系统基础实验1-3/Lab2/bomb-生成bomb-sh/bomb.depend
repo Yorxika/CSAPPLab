@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1461406499 source:d:\test\bomb\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+

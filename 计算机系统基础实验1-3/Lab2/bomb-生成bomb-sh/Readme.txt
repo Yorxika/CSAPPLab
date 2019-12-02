@@ -1,0 +1,7 @@
+这是用CodeBlocks编的一个C程序，用于读取各班级（201401~201410）的学生学号（文件格式见CS201401等），然后自动生成linux下的shell程序，
+但该shell程序是windows文本格式的，里面的换行符在linux下为^M，所以需要复制到linux下后用gedit打开，然后生成一个新文件，复制、粘贴shell文件的内容，
+在按linux文本格式保存即可。
+然后把gedit生成的cs201401.sh等shell程序拷贝至bomb实验目录里（src目录的上一级目录），然后用sh cs201401.sh运行即可。
+运行之前，应先创建bombs子目录，生成的所有学生的bomb文件都先存在该目录下；再创建allbombs子目录，shell程序会把bombs下的数据复制到allbombs下对应的子目录下，
+并且是按班级重新归类的。
+运行完所有shell以后，直接将allbombs下的zip考出来就行了。注意：必须在32位linux生成才行，64位下的执行文件结构和实验说明上不一致，最好不用
